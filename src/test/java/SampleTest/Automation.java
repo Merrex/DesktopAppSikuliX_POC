@@ -11,8 +11,8 @@ public class Automation {
 
         ImagePath.setBundlePath("/Users/testvagrant/untitled1/src/test/java/imgs");
         Screen s = new Screen();
-
-        s.find("/Users/testvagrant/untitled1/src/test/java/imgs/one_saathi.png");
+        Pattern pattern=new Pattern("/Users/testvagrant/untitled1/src/test/java/imgs/one_saathi.png");
+        s.find(pattern);
         s.click();
         s.wait(5000);
 
