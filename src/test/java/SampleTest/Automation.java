@@ -9,9 +9,10 @@ public class Automation {
 
     public static void main(String[] args) throws FindFailed, InterruptedException {
 
-        ImagePath.setBundlePath("/Users/testvagrant/untitled1/src/test/java/imgs");
+
+        ImagePath.setBundlePath(System.getProperty("user.dir")+"/src/test/java/imgs");
         Screen s = new Screen();
-        Pattern pattern=new Pattern("/Users/testvagrant/untitled1/src/test/java/imgs/one_saathi.png");
+        Pattern pattern=new Pattern(System.getProperty("user.dir")+"/src/test/java/imgs/AUT_logo.png");
         s.find(pattern);
         s.click();
         s.wait(5000);
